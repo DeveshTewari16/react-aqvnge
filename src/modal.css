@@ -1,0 +1,34 @@
+.modal-wrapper {
+  box-sizing: border-box;
+  max-width: 800px;
+  max-height: 800px;
+  margin-top: 30px;
+  padding: 10px;
+  box-shadow: 30px -4px 72px 0px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 30px -4px 72px 0px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 30px -4px 72px 0px rgba(0, 0, 0, 0.37);
+  background-color: white;
+  border: 1px solid white;
+}
+
+.header {
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: space-between;
+  color: black;
+  display: flex;
+}
+form {
+  overflow: hidden;
+}
+
+label {
+  float: left;
+  width: 200px;
+  padding-right: 24px;
+}
+
+input {
+  float: left;
+  width: calc(100% - 200px);
+}

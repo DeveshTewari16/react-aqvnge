@@ -1,0 +1,20 @@
+.item {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  height: auto;
+}
+
+.dataItem {
+  list-style-type: none;
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: aqua;
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

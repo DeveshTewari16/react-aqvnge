@@ -1,0 +1,22 @@
+.main{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin:5px;
+}
+
+button{
+  background-color: orange;
+  color:black;
+}
+
+.add{
+display:flex;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin:5px;
+}
