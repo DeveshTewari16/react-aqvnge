@@ -11,6 +11,11 @@ const DataItem = props => {
             Delete
           </button>
         </li>
+        <li>
+          <button onClick={props.handleReviews.bind(null, props.items.id)}>
+            Reviews
+          </button>
+        </li>
       </ul>
     </div>
   );

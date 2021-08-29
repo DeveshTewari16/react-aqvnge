@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import classes from './App.module.css';
 import { data } from './data.js';
 import DataItem from './DataItem';
 import Modal from './Modal.js';
+import Reviews from './Reviews.js';
 
 export default function App() {
   const [search, setSearch] = useState('');
@@ -11,6 +13,7 @@ export default function App() {
   const [fetchedData, setFetchedData] = useState([]);
 
   const [modal, setModalState] = useState(false);
+  const history = useHistory();
 
   function debouncer(fn, d) {
     let timer;
@@ -47,6 +50,10 @@ export default function App() {
   const debouncedSearch = debouncer(handleSearch, 1000);
 
   const handleAdd = () => setModalState(!modal);
+
+  const handleReviews = id => {
+    history.push(`/reviews/${id}`);
+  };
 
   //delete handler
   const deleteHandler = id => {
@@ -90,6 +97,7 @@ export default function App() {
               key={item.title}
               items={item}
               deleteList={deleteHandler}
+              handleReviews={handleReviews}
             />
           );
         })}
@@ -97,6 +105,11 @@ export default function App() {
       <footer className={classes.footer}>
         <p> Copy rights reserved.</p>
       </footer>
+      <Switch>
+        <Route path="/reviews/:id" exact>
+          <Reviews />
+        </Route>
+      </Switch>
     </React.Fragment>
   );
 }
