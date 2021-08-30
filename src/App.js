@@ -98,6 +98,7 @@ export default function App() {
               items={item}
               deleteList={deleteHandler}
               handleReviews={handleReviews}
+              dataList={data_list}
             />
           );
         })}
